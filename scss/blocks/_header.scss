@@ -1,0 +1,95 @@
+.bodyshow{
+    overflow: hidden;
+}
+.site-header__inner {
+    padding-top: 32px;
+    padding-bottom: 40px;
+}
+.site-header__wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.site-header__btn{
+    width: 24px;
+    height: 13px;
+    border: none;
+    background-color: transparent;
+    background-image: url(../images/burger.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.site-header__btn-show{
+    background-image: url(../images/burger-X.svg);
+}
+.sitenav {
+    position: fixed;
+    top: 88px;
+    right: 32px;
+    transform: translate(200%);
+    transition: 0.5s transform ease;
+    z-index: 1;
+}
+.sitenav-show{
+    transform: translate(0);
+}
+.sitenav__list {
+    width: 223px;
+    padding: 40px 10px;
+    @include list-unstyle;
+    background-color: var(--main-text-color-blue);
+}
+.sitenav__item {
+    text-align: center;
+    &:nth-child(2){
+        padding: 32px 0;
+    }
+}
+.sitenav__link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--main-text-color-white);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+@include mobile-first(689px){
+    .site-header__btn{
+        display: none;
+    }
+    .site-header__inner {
+        padding-top: 64px;
+        padding-bottom: 47px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .sitenav {
+        position: static;
+        transform: translate(0);
+        transition: 0s transform ease-in;
+    }
+    .sitenav__list {
+        padding: 0px 0px;
+        width: 100%;
+        display: flex;
+        background-color: transparent;
+    }
+    .sitenav__item {
+        &:nth-child(2){
+            padding: 0 42px;
+        }
+    }
+    .sitenav__link {
+        color: var(--main-text-color-blue);
+    }
+}
+@include mobile-first(1100px){
+    .site-header__inner {
+        padding-top: 64px;
+        padding-bottom: 54px;
+    }
+}

@@ -1,0 +1,21 @@
+@mixin list-unstyle {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+@mixin psevdo-elements($position, $tepa, $chap ) {
+    position: $position;
+    top: $tepa;
+    left: $chap;
+    content: "";
+}
+@mixin mobile-first($min) {
+    @media only screen and (min-width:$min)  {
+        @content;
+    }
+}
+@mixin desktop-first($max) {
+    @media only screen and (max-width:$max)  {
+        @content;
+    }
+}

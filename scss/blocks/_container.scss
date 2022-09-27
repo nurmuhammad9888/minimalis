@@ -1,0 +1,21 @@
+.container{
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+@include mobile-first(320px){
+    .container{
+        padding: 0 32px;
+    }
+}
+@include mobile-first(689px){
+    .container{
+        padding: 0 40px;
+    }
+}
+@include mobile-first(1150px){
+    .container{
+        padding: 0 20px;
+    }
+}
