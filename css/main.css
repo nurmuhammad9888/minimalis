@@ -466,6 +466,8 @@ body {
 }
 
 .site-header__btn-show {
+  width: 18px;
+  height: 19px;
   background-image: url(../images/burger-X.svg);
 }
 
